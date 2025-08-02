@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Clara Doces - Confeitaria Artesanal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .handwritten {
+            font-family: 'Great Vibes', cursive;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(255, 182, 193, 0.7), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1798&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            background: linear-gradient(to bottom right, #fff, #fff8f8);
+        }
+        .gold-divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+    </style>
+</head>
+<body class="bg-pink-50 text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-birthday-cake text-3xl text-pink-400 mr-2"></i>
+                <h1 class="text-2xl font-bold text-pink-600 handwritten">Maria Clara Doces</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-pink-600 hover:text-pink-400 font-medium transition">Início</a>
+                <a href="#products" class="text-gray-700 hover:text-pink-400 font-medium transition">Produtos</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-400 font-medium transition">Sobre</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-pink-400 font-medium transition">Depoimentos</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-400 font-medium transition">Contato</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a href="#order" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full font-medium transition shadow-lg hover:shadow-xl">Fazer Encomenda</a>
+            </div>
+            
+            <button class="md:hidden text-pink-600 text-2xl" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-pink-600 hover:text-pink-400 font-medium transition">Início</a>
+                <a href="#products" class="text-gray-700 hover:text-pink-400 font-medium transition">Produtos</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-400 font-medium transition">Sobre</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-pink-400 font-medium transition">Depoimentos</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-400 font-medium transition">Contato</a>
+                <a href="#order" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full font-medium transition text-center">Fazer Encomenda</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4 py-20 md:py-32">
+            <div class="max-w-2xl bg-white bg-opacity-90 p-8 md:p-12 rounded-lg shadow-xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-pink-600 mb-4 handwritten">Maria Clara Doces</h2>
+                <p class="text-xl md:text-2xl text-gray-700 mb-8 handwritten">"Feitos com amor, servidos com carinho"</p>
+                <p class="text-gray-700 mb-8">Criações artesanais que transformam momentos especiais em memórias inesquecíveis. Cada doce é uma expressão de carinho e dedicação.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-medium transition text-center shadow-lg hover:shadow-xl">Ver Doces</a>
+                    <a href="#order" class="bg-white border-2 border-pink-500 text-pink-600 hover:bg-pink-50 px-6 py-3 rounded-full font-medium transition text-center shadow-lg hover:shadow-xl">Fazer Pedido</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-4 handwritten">Nossas Delícias</h2>
+                <div class="gold-divider w-32 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Conheça nossos produtos feitos com ingredientes selecionados e muito carinho</p>
+            </div>
+            
+            <!-- Product Filter -->
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button class="px-4 py-2 text-sm font-medium rounded-l-lg border border-pink-300 bg-pink-100 text-pink-700 filter-btn active" data-filter="all">
+                        Todos
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium border-t border-b border-pink-300 bg-white text-pink-600 hover:bg-pink-50 filter-btn" data-filter="cakes">
+                        Bolos
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium border-t border-b border-pink-300 bg-white text-pink-600 hover:bg-pink-50 filter-btn" data-filter="sweets">
+                        Doces
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium rounded-r-lg border border-pink-300 bg-white text-pink-600 hover:bg-pink-50 filter-btn" data-filter="events">
+                        Eventos
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cake 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1" data-category="cakes">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80" alt="Bolo de Casamento" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Bolos de Casamento</h3>
+                        <p class="text-gray-600 mb-4">Criações elegantes e sofisticadas para o dia mais especial da sua vida.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold">A partir de R$ 800</span>
+                            <button class="text-pink-500 hover:text-pink-700 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cake 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1" data-category="cakes">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80" alt="Bolo de Aniversário" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Bolos Temáticos</h3>
+                        <p class="text-gray-600 mb-4">Personalizados com os temas favoritos para festas inesquecíveis.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold">A partir de R$ 350</span>
+                            <button class="text-pink-500 hover:text-pink-700 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sweet 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1" data-category="sweets">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Brigadeiros Gourmet" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Brigadeiros Gourmet</h3>
+                        <p class="text-gray-600 mb-4">Variedade de sabores sofisticados para todos os gostos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold">A partir de R$ 80/dúzia</span>
+                            <button class="text-pink-500 hover:text-pink-700 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sweet 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1" data-category="sweets">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Trufas Finas" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Trufas Finas</h3>
+                        <p class="text-gray-600 mb-4">Delicadas e sofisticadas, perfeitas para presentear.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold">A partir de R$ 120/dúzia</span>
+                            <button class="text-pink-500 hover:text-pink-700 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1" data-category="events">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519671488599-3faf83c1b223?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mesas Decoradas" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Mesas Decoradas</h3>
+                        <p class="text-gray-600 mb-4">Ambientes encantadores para sua festa com doces e decoração.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold">A partir de R$ 1.500</span>
+                            <button class="text-pink-500 hover:text-pink-700 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1" data-category="events">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Coffee Break" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Coffee Break Premium</h3>
+                        <p class="text-gray-600 mb-4">Seleção de doces finos e bebidas para eventos corporativos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-pink-500 font-bold">A partir de R$ 45/pessoa</span>
+                            <button class="text-pink-500 hover:text-pink-700 transition">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Maria Clara trabalhando" class="rounded-xl shadow-xl w-full h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-6 handwritten">Sobre Maria Clara</h2>
+                    <div class="gold-divider w-32 mb-6"></div>
+                    <p class="text-gray-700 mb-4">Desde criança, Maria Clara demonstrou paixão pela confeitaria. O que começou como um hobby de infância transformou-se em uma carreira dedicada a criar doces que encantam e emocionam.</p>
+                    <p class="text-gray-700 mb-4">Formada em Gastronomia com especialização em Confeitaria, Maria Clara traz para seus clientes a combinação perfeita entre técnica apurada e criatividade sem limites.</p>
+                    <p class="text-gray-700 mb-6">"Meu objetivo é transformar momentos especiais em memórias doces e inesquecíveis. Cada bolo, cada doce é feito com a mesma dedicação e carinho que eu dedicaria à minha própria família."</p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <i class="fas fa-award text-3xl text-pink-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-pink-600">Diferenciais</h4>
+                            <p class="text-gray-600">Ingredientes premium • Zero conservantes • Atendimento personalizado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-4 handwritten">Depoimentos</h2>
+                <div class="gold-divider w-32 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">O que nossos clientes dizem sobre nossos produtos</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"O bolo que a Maria Clara fez para nosso casamento foi absolutamente deslumbrante e delicioso! Todos os convidados elogiaram. Superou todas as nossas expectativas!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Ana Carolina" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-pink-600">Ana Carolina</h4>
+                            <p class="text-gray-500 text-sm">Noiva</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Contratei os serviços para o coffee break da nossa convenção anual e foi um sucesso! Os doces eram lindos e deliciosos, e o atendimento foi impecável."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ricardo Almeida" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-pink-600">Ricardo Almeida</h4>
+                            <p class="text-gray-500 text-sm">Diretor de RH</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Todos os anos encomendo o bolo de aniversário da minha filha com a Maria Clara. Ela capta exatamente o que a criança imagina e transforma em realidade. É mágico!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Patrícia Santos" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-pink-600">Patrícia Santos</h4>
+                            <p class="text-gray-500 text-sm">Mãe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="py-16 bg-pink-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-pink-500 text-white p-8">
+                        <h2 class="text-3xl font-bold mb-4 handwritten">Faça sua encomenda</h2>
+                        <div class="gold-divider w-24 mb-6"></div>
+                        <p class="mb-6">Preencha o formulário ao lado e em breve entraremos em contato para discutir os detalhes do seu pedido especial.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(11) 98765-4321</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>contato@mariaclaradoces.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>Rua dos Doces, 123 - São Paulo/SP</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form id="order-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-1">Nome completo</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-1">E-mail</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-1">Telefone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="event-date" class="block text-gray-700 font-medium mb-1">Data do evento</label>
+                                <input type="date" id="event-date" name="event-date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="product-type" class="block text-gray-700 font-medium mb-1">Tipo de produto</label>
+                                <select id="product-type" name="product-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                    <option value="">Selecione...</option>
+                                    <option value="wedding-cake">Bolo de Casamento</option>
+                                    <option value="birthday-cake">Bolo de Aniversário</option>
+                                    <option value="gourmet-sweets">Doces Finos</option>
+                                    <option value="decorated-table">Mesa Decorada</option>
+                                    <option value="other">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-1">Detalhes do pedido</label>
+                                <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-6 rounded-lg transition shadow-lg hover:shadow-xl">
+                                Enviar Pedido
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-gray-700 mb-4">Ou se preferir, fale conosco pelo WhatsApp</p>
+                <a href="https://wa.me/5511987654321?text=Olá%20Maria%20Clara%20Doces,%20gostaria%20de%20fazer%20um%20pedido!" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition shadow-lg hover:shadow-xl">
+                    <i class="fab fa-whatsapp text-xl mr-2"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-4 handwritten">Entre em Contato</h2>
+                <div class="gold-divider w-32 mx-auto my-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos aqui para tornar seu evento ainda mais especial</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-6 rounded-xl bg-pink-50">
+                    <div class="text-pink-500 text-3xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-600 mb-2">Endereço</h3>
+                    <p class="text-gray-700">Rua dos Doces, 123<br>Jardim Confeiteiro<br>São Paulo - SP</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl bg-pink-50">
+                    <div class="text-pink-500 text-3xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-600 mb-2">Telefone</h3>
+                    <p class="text-gray-700">(11) 98765-4321<br>Segunda a Sexta: 9h às 18h</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-xl bg-pink-50">
+                    <div class="text-pink-500 text-3xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-pink-600 mb-2">E-mail</h3>
+                    <p class="text-gray-700">contato@mariaclaradoces.com<br>Respondemos em até 24h</p>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.075426745291!2d-46.65342692434598!3d-23.56573436174043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1689872224294!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-xl shadow-lg"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-12 bg-pink-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 handwritten">Siga-nos nas Redes Sociais</h2>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-2xl hover:text-pink-200 transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-2xl hover:text-pink-200 transition">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-2xl hover:text-pink-200 transition">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                <a href="#" class="text-2xl hover:text-pink-200 transition">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p class="max-w-2xl mx-auto">Acompanhe nosso trabalho e inspire-se com nossas criações diárias. Compartilhamos bastidores, novidades e promoções exclusivas!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-birthday-cake text-2xl text-pink-400 mr-2"></i>
+                        <h3 class="text-xl font-bold text-pink-400 handwritten">Maria Clara Doces</h3>
+                    </div>
+                    <p class="text-sm mt-2">"Feitos com amor, servidos com carinho"</p>
+                </div>
+                
+                <div class="mb-4 md:mb-0">
+                    <p class="text-sm">&copy; 2023 Maria Clara Doces. Todos os direitos reservados.</p>
+                </div>
+                
+                <div>
+                    <a href="#" class="text-sm hover:text-pink-400 transition">Política de Privacidade</a>
+                    <span class="mx-2">•</span>
+                    <a href="#" class="text-sm hover:text-pink-400 transition">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-pink-500 text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center transition opacity-0 invisible hover:bg-pink-600">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Filter Products
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('bg-pink-100', 'text-pink-700', 'active'));
+                filterButtons.forEach(btn => btn.classList.add('bg-white', 'text-pink-600'));
+                
+                // Add active class to clicked button
+                button.classList.remove('bg-white', 'text-pink-600');
+                button.classList.add('bg-pink-100', 'text-pink-700', 'active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form Submission
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado pelo seu pedido! Entraremos em contato em breve para confirmar os detalhes.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
