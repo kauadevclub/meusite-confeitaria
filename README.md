@@ -3,7 +3,7 @@
 Este é um site desenvolvido para uma confeiteira fictícia, criado com foco em demonstrar minhas habilidades como desenvolvedor front-end. O site apresenta uma estrutura realista, moderna e responsiva, ideal para profissionais da confeitaria que desejam divulgar seus produtos online.
 
 ## 🔗 Visualizar o site
-👉 [Clique aqui para ver o site no ar](https://kauadevclub.github.io/nome-do-repositorio)
+👉 [https://kauadevclub.github.io/meusite-confeitaria/)
 
 ---
 
